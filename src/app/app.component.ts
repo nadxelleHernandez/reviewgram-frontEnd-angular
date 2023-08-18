@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { User } from './interfaces/user';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +9,13 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 
 export class AppComponent {
   title = 'ReviewGram';
+
+  user: User = {
+    id: -1,
+    username: '',
+    name: '',
+    email: '',
+    password: ''
+  }
+
 }

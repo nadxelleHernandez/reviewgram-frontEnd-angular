@@ -2,6 +2,17 @@
     flex: 1 1 auto;
   }
 
-.nav-bar-links {
-    padding: 5px;
+
+%nav-bar-links {
+  color:white;
+  text-decoration-color: white;
+}
+
+.nav-bar-link {
+  @extend %nav-bar-links;
+  padding: 10px;
+}
+
+.home-link {
+  @extend %nav-bar-links;
 }

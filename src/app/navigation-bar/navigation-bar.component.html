@@ -1,10 +1,13 @@
-<mat-toolbar>
-    <a [routerLink]="['/']">
-        <header class="header">
-          <h1>ReviewGram</h1>
-        </header>
-    </a>
-    <span class="example-spacer"></span>
-    <a class="nav-bar-links">Login</a>
-    <a class="nav-bar-links">Sign Up</a>
-</mat-toolbar>
+<header>
+  <mat-toolbar color="primary">
+      <a [routerLink]="['/']" class="home-link">
+            <h1>ReviewGram</h1>
+      </a>
+      <a *ngIf="user.id != -1" class="nav-bar-link" [routerLink]="['/userList',user.id]">My Lists</a>
+      <span class="example-spacer"></span>
+      <a *ngIf="user.id != -1" class="nav-bar-link" (click)="logOut()" href="#">LogOut</a>
+      <a *ngIf="user.id == -1" class="nav-bar-link" (click)="logIn()" href="#">Login</a>
+      <a *ngIf="user.id == -1" class="nav-bar-link" [routerLink]="['/user']">Sign Up</a>
+      <span *ngIf="user.id != -1">{{user.username}}</span>
+  </mat-toolbar>
+</header>
