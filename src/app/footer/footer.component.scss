@@ -1,0 +1,19 @@
+.footer {
+    background-color: #673ab7;
+    color: white;
+    display: flex;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.logo {
+    width: 150px;
+    padding: 0 10px;
+}
+
+.author {
+    padding-left: 40px;
+    span {
+        font-size: larger;
+    }
+}
