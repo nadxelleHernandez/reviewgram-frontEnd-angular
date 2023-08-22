@@ -1,0 +1,9 @@
+<article class="card">
+    <img class="card-top-img" src="{{media.poster_url}}" alt="Poster">
+    <div class="card-body">
+        <h3 class="card-title">{{media.isMovie ? media.title : media.name}}</h3>
+        <div class="card-subtitle">
+            <mat-star-rating [rating]="media.rating" [readOnly]="true"></mat-star-rating>
+        </div>
+    </div>
+</article>

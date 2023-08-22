@@ -1,0 +1,18 @@
+.search-media {
+  padding: 15px;
+  display: flex;
+  align-items:flex-start;
+  justify-content: center;
+
+  button {
+    margin-left: 10px;
+  }
+
+  .search-input {
+    width: 50%;
+  }
+}
+
+.top-media {
+  display: flex;
+}

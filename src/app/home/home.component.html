@@ -1,1 +1,15 @@
-<p>home works!</p>
+<section class="search-media">
+  <mat-form-field appearance="outline" class="search-input">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Search for a Movie/TV show">
+  </mat-form-field>
+  <button mat-raised-button color="accent">Search</button>
+  <button mat-raised-button color="accent" aria-label="Clear search">Clear</button>
+</section>
+<section>
+  <div class="top-media">
+    <media-card [media]="mediaExample"></media-card>
+    <media-card [media]="mediaExample"></media-card>
+  </div>
+</section>
+
