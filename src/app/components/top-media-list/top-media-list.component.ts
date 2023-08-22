@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MediaCardComponent } from '../media-card/media-card.component';
-import { Media } from '../interfaces/media';
+import { Media } from '../../interfaces/media';
 
 @Component({
   selector: 'app-top-media-list',

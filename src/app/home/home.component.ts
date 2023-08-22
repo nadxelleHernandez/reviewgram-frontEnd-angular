@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button'
-import { TopMediaListComponent } from '../top-media-list/top-media-list.component';
+import { TopMediaListComponent } from '../components/top-media-list/top-media-list.component';
 
 
 @Component({

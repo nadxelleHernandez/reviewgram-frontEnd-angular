@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RatingComponent } from '../rating/rating.component';
-import { Media } from '../interfaces/media';
+import { Media } from '../../interfaces/media';
 
 @Component({
   selector: 'media-card',

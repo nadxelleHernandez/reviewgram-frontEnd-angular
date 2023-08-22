@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
-import { User } from '../interfaces/user'; 
+import { User } from '../../interfaces/user'; 
 
 @Component({
   selector: 'app-navigation-bar',
