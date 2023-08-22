@@ -20,6 +20,6 @@ export class HomeComponent {
     name: '',
     title: 'The Monkey King',
     isMovie: true,
-    rating: 3.5
+    rating: 3
   }
 }

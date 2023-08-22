@@ -1,0 +1,37 @@
+.rating {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #ffd740;
+
+    .star {
+        font-size: 24px;
+        display: inline-block;
+        color: gray;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &::before {
+            content: "\2605";
+        }
+    }
+
+    .star.full {
+        color: #ffd740;
+    }
+
+    .star.half::after {
+        content: "\2605";
+        color: #ffd740;
+        position: absolute;
+        margin-left: -20px;
+        width: 10px;
+        overflow: hidden;
+    }
+}
+
+//Add css for when is clickable

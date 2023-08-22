@@ -1,6 +1,5 @@
-<div class="container">
-  <button mat-icon-button color="accent" *ngFor="let ratingId of ratingArray; 
-         index as i" [id]="'star_'+i" (click)="calculateRating(i+1)">
-    <mat-icon>{{ iconStatus(i)}}</mat-icon>    
-  </button>
+<div class="rating">
+  <span *ngFor="let fullStar of fullStars" class="star full"></span>
+  <span *ngIf="hasAnHalfStar" class="star half"></span>
+  <span *ngFor="let emptyStar of emptyStars" class="star"></span>
 </div>

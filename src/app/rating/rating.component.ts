@@ -1,26 +1,24 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button'
 
 @Component({
   selector: 'mat-star-rating',
   standalone: true,
-  imports: [CommonModule, MatIconModule, MatButtonModule],
+  imports: [CommonModule],
   templateUrl: './rating.component.html',
   styleUrls: ['./rating.component.scss']
 })
 
 export class RatingComponent {
-  @Input('rating') rating: number = 3;
+  @Input('rating') rating: number = 0;
   @Input('readOnly') readOnly: boolean = true;
+  @Input('totalStars') totalStars: number = 5;
   @Output() ratingUpdated = new EventEmitter();
 
-  totalStar: number = 5;
   ratingArray: number[] = [];
 
   ngOnInit() {
-    for(let index = 0; index < this.totalStar; index++) {
+    for(let index = 0; index < this.totalStars; index++) {
       this.ratingArray.push(index);
     }
   }
@@ -30,11 +28,23 @@ export class RatingComponent {
     this.ratingUpdated.emit(rating);
   }
 
-  iconStatus(index: number) {
-    if (this.rating >= index + 1) {
-      return 'star';
-    } else {
-      return 'star_border';
-    }
+  private get numberOfFullStars(): number {
+    return Math.floor(this.rating);
+  }
+
+  private get numberOfEmptyStars(): number {
+    return this.totalStars - Math.ceil(this.rating);
+  }
+
+  get fullStars(): any[] {
+    return Array(this.numberOfFullStars);
+  }
+
+  get emptyStars(): any[] {
+    return Array(this.numberOfEmptyStars);
+  }
+
+  get hasAnHalfStar(): boolean {
+    return this.rating % 1 !== 0;
   }
 }
