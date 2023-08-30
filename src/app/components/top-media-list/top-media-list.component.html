@@ -1,10 +1,5 @@
 <div class="top-media-container">
-    <media-card [media]="mediaExample"></media-card>
-    <media-card [media]="mediaExample"></media-card>
-    <media-card [media]="mediaExample"></media-card>
-    <media-card [media]="mediaExample"></media-card>
-    <media-card [media]="mediaExample"></media-card>
-    <media-card [media]="mediaExample"></media-card>
-    <media-card [media]="mediaExample"></media-card>
-    <media-card [media]="mediaExample"></media-card>
+    <media-card 
+        *ngFor="let media of mediaList" 
+            [media]="media"></media-card>
 </div>

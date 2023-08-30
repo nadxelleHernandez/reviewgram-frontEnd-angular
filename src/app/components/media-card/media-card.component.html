@@ -3,7 +3,7 @@
     <div class="card-body">
         <h3 class="card-title">{{media.isMovie ? media.title : media.name}}</h3>
         <div class="card-subtitle">
-            <mat-star-rating [rating]="media.rating" [readOnly]="true"></mat-star-rating>
+            <mat-star-rating [rating]="(media.rating * 5) / 10" [readOnly]="true"></mat-star-rating>
         </div>
     </div>
 </article>
