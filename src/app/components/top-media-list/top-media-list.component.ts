@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MediaCardComponent } from '../media-card/media-card.component';
 import { Media } from '../../interfaces/media';
@@ -8,10 +8,12 @@ import { Media } from '../../interfaces/media';
   standalone: true,
   imports: [CommonModule, MediaCardComponent],
   templateUrl: './top-media-list.component.html',
-  styleUrls: ['./top-media-list.component.scss']
+  styleUrls: ['./top-media-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class TopMediaListComponent {
+  @Input() mediaList: Media[] = [];
   mediaExample: Media = {
     poster_url: 'http://image.tmdb.org/t/p/w154/i6ye8ueFhVE5pXatgyRrZ83LBD8.jpg',
     name: '',

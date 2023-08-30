@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RatingComponent } from '../rating/rating.component';
 import { Media } from '../../interfaces/media';
@@ -8,7 +8,8 @@ import { Media } from '../../interfaces/media';
   standalone: true,
   imports: [CommonModule, RatingComponent],
   templateUrl: './media-card.component.html',
-  styleUrls: ['./media-card.component.scss']
+  styleUrls: ['./media-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MediaCardComponent {
   @Input() media!: Media;
