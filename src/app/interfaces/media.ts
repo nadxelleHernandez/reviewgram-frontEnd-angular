@@ -1,4 +1,9 @@
 export interface Media {
+    TMDB_id: number;
+    first_air_date: Date;
+    origin_country: [];
+    original_language: string;
+    overview: string;
     title:string;
     name:string;
     rating:number;

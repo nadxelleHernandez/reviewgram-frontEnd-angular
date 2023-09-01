@@ -14,11 +14,4 @@ import { Media } from '../../interfaces/media';
 
 export class TopMediaListComponent {
   @Input() mediaList: Media[] = [];
-  mediaExample: Media = {
-    poster_url: 'http://image.tmdb.org/t/p/w154/i6ye8ueFhVE5pXatgyRrZ83LBD8.jpg',
-    name: '',
-    title: 'The Monkey King',
-    isMovie: true,
-    rating: 3
-  }
 }
