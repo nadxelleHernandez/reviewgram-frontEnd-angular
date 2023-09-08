@@ -17,6 +17,6 @@ export class MediaCardComponent {
   endpoint = '';
 
   ngOnInit() {
-    this.endpoint = this.media?.isMovie ? 'movie' : 'tv';
+    this.endpoint = this.media?.isMovie ? 'movies' : 'tv';
   }
 }

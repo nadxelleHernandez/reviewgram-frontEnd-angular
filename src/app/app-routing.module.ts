@@ -28,7 +28,7 @@ const routes: Routes = [
     title: 'TV Show details'
   },
   {
-    path: 'movie/:tmdb_id',
+    path: 'movies/:tmdb_id',
     component: MovieComponent,
     title: 'Movie details'
   }

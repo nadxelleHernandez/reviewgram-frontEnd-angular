@@ -1,0 +1,25 @@
+<section class="media-details-container">
+  <div class="media-details-header">Header for buttons</div>
+  <div class="media-details-body">
+    <h2>{{media.isMovie ? media.title : media.name}}</h2>
+    <img src="{{media.poster_url}}" alt="{{media.isMovie ? media.title : media.name}} image" />
+    <h3>Overview</h3>
+    <p class="media-details-overview-text">{{media.overview}}</p>
+    <div class="media-details">
+     <ul>
+         <li>Rating: {{media.rating}}</li>
+         <li>Original Language: {{media.original_language}}</li>
+         <li>Origin Country: {{media.origin_country}} </li>
+         <li>Number of Episodes: {{media.number_of_episodes}}</li>
+         <li>Number of Seasons:{{media.number_of_seasons}}</li>
+         <li>Status: {{media.status}}</li>
+         <li>Release date: {{media.release_date}} </li>
+         <li>First Air Date: {{media.first_air_date}}</li>
+         <li>Last Air Date: {{media.last_air_date}}</li>
+         <li>Runtime: {{media.runtime}} mins</li>
+         <li>Episode Runtime: {{media.episode_runtime}}</li>
+         <li>Genres: </li>
+     </ul>
+    </div>
+  </div>
+ </section>

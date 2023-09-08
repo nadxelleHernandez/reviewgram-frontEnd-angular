@@ -9,9 +9,6 @@ export class ReviewgramAPIService {
   baseURL = 'http://127.0.0.1:5000'
   imagesURL = '';
 
-  constructor() {
-   }
-
   async getImagesUrlFromAPI(): Promise<string>  {
     const response = await fetch(`${this.baseURL}/media/image-url`, {method: 'GET'});
 
@@ -68,6 +65,22 @@ export class ReviewgramAPIService {
       this.logError('Getting Top TV Shows failed', response);
     }
     return tvshows;
+  }
+
+  async getMedia(tmdb_id: number, route:string): Promise<Media> {
+    const response = await fetch(`${this.baseURL}/media/${route}/${tmdb_id}`, {method: 'GET'});
+    let media;
+    if(response.ok) {
+      const data = await response.json() ?? {};
+      media = route==='movies' ? data.movie : data.tvshow;
+      if(this.imagesURL==='') {
+        this.imagesURL = await this.getImagesUrlFromAPI();
+      }
+      media.poster_url = media.poster_url ? `${this.imagesURL}w185${media.poster_url}` : null;
+    } else {
+      this.logError(`Threre was a problem getting the details for ${route}`, response);
+    }
+    return media;
   }
 
   logError(message: string, response: Response) {
