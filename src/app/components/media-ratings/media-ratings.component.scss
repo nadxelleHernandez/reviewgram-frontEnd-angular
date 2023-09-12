@@ -1,7 +1,6 @@
 .media-details{
     &-container {
         width: 550px;
-        overflow: auto;
     }
     &-header {
         justify-content: space-between;
@@ -12,6 +11,7 @@
     list-style: none;
     margin-block-start: 0;
     padding-inline-start: 0;
+
     li {
         border-color: gainsboro;
         border-radius: 5px;

@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'movies/:tmdb_id',
-    component: MovieComponent,
+    component: TVShowComponent,
     title: 'Movie details'
   }
 ];

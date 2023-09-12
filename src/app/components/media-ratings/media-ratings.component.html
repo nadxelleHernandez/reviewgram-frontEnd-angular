@@ -4,7 +4,7 @@
         <mat-star-rating [rating]="(media.rating * 5) / 10" [readOnly]="true"></mat-star-rating>
     </div>
     <div class="media-details-body">
-        <ul class="review-list">
+        <ul *ngIf="reviews.length; else elseBlock" class="review-list">
             <li *ngFor="let review of reviews">
                 <div class="review-list-header">
                     <span class="review-list-user-name">{{review.user.username}}</span>
@@ -15,5 +15,8 @@
                 </div>
             </li>
         </ul>
+        <ng-template #elseBlock>
+            <p>No reviews yet!</p>
+        </ng-template>
     </div>
 </section>
