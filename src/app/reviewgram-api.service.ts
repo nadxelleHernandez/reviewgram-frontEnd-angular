@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Media } from './interfaces/media';
+import { Review } from './interfaces/review';
 
 @Injectable({
   providedIn: 'root'
@@ -78,9 +79,21 @@ export class ReviewgramAPIService {
       }
       media.poster_url = media.poster_url ? `${this.imagesURL}w185${media.poster_url}` : null;
     } else {
-      this.logError(`Threre was a problem getting the details for ${route}`, response);
+      this.logError(`There was a problem getting the details for ${route}`, response);
     }
     return media;
+  }
+
+  async getReviews(tmdb_id: number, route: string): Promise<Review[]> {
+    const response = await fetch(`${this.baseURL}/media/${route}/${tmdb_id}/reviews`, {method: 'GET'});
+    let reviews;
+    if(response.ok) {
+      const data = await response.json() ?? {};
+      reviews = data.reviews;
+    } else {
+      this.logError(`There was a problem getting the reviews for ${route}`, response);
+    }
+    return reviews;
   }
 
   logError(message: string, response: Response) {

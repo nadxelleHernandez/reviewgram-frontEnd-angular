@@ -7,3 +7,34 @@ html, body {
     margin: 0;
 }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.media-details {
+    &-container {
+        display: flexbox;
+        flex-direction: column;
+        border-width: 1px;
+        border-radius: 6px;
+        border-color: gainsboro;
+        border-style: solid;
+        margin: 20px;
+        box-sizing: border-box;
+        height: 85vh;
+    }
+    &-header {
+        display: flex;
+        justify-content:end;
+        background-color: #fcf6e3;
+        border-radius: 5px;
+        border-bottom: gainsboro;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-width: 1px;
+        border-style: solid;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top-color: transparent;
+    }
+    &-body {
+        margin: 20px;
+    }
+}

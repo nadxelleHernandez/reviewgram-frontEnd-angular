@@ -1,0 +1,32 @@
+.media-details{
+    &-container {
+        width: 550px;
+        overflow: auto;
+    }
+    &-header {
+        justify-content: space-between;
+    }
+}
+
+.review-list {
+    list-style: none;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+    li {
+        border-color: gainsboro;
+        border-radius: 5px;
+        border-width: 1px;
+        border-style: solid;
+        margin-bottom: 15px;
+        padding: 10px;
+        
+    }
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    &-user-name {
+        font-weight: 500;
+    }
+}

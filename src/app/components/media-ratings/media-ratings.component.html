@@ -1,0 +1,19 @@
+<section class="media-details-container">
+    <div class="media-details-header">
+        <button>Reviews</button>
+        <mat-star-rating [rating]="(media.rating * 5) / 10" [readOnly]="true"></mat-star-rating>
+    </div>
+    <div class="media-details-body">
+        <ul class="review-list">
+            <li *ngFor="let review of reviews">
+                <div class="review-list-header">
+                    <span class="review-list-user-name">{{review.user.username}}</span>
+                    <mat-star-rating [rating]="(review.rating * 5) / 10" [readOnly]="true"></mat-star-rating>
+                </div>
+                <div class="review-list-body">
+                    <p>{{review.content}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
