@@ -7,13 +7,13 @@ import { ReviewgramAPIService } from 'src/app/reviewgram-api.service';
 import { Media } from 'src/app/interfaces/media';
 
 @Component({
-  selector: 'app-tvshow',
+  selector: 'app-media',
   standalone: true,
   imports: [CommonModule, MediaDetailsComponent, MediaRatingsComponent],
-  templateUrl: './tvshow.component.html',
-  styleUrls: ['./tvshow.component.scss']
+  templateUrl: './media.component.html',
+  styleUrls: ['./media.component.scss']
 })
-export class TVShowComponent {
+export class MediaComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   mediaService = inject(ReviewgramAPIService);
   media: Media = {

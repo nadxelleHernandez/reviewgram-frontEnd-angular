@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { UserListsComponent } from './pages/user-lists/user-lists.component';
-import { TVShowComponent } from './pages/tvshow/tvshow.component';
-import { MovieComponent } from './pages/movie/movie.component';
+import { MediaComponent } from './pages/media/media.component';
 
 const routes: Routes = [
   {
@@ -24,12 +23,12 @@ const routes: Routes = [
   },
   {
     path: 'tv/:tmdb_id',
-    component: TVShowComponent,
+    component: MediaComponent,
     title: 'TV Show details'
   },
   {
     path: 'movies/:tmdb_id',
-    component: TVShowComponent,
+    component: MediaComponent,
     title: 'Movie details'
   }
 ];
