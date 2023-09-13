@@ -8,17 +8,17 @@
     <div class="media-details">
      <ul>
          <li>Rating: {{media.rating}}</li>
-         <li>Original Language: {{media.original_language}}</li>
-         <li>Origin Country: {{media.origin_country}} </li>
-         <li>Number of Episodes: {{media.number_of_episodes}}</li>
-         <li>Number of Seasons:{{media.number_of_seasons}}</li>
+         <li>Original Language: {{media.original_language.toUpperCase()}}</li>
+         <li *ngIf="!media.isMovie">Origin Country: {{media.origin_country}} </li>
+         <li *ngIf="!media.isMovie">Number of Episodes: {{media.number_of_episodes}}</li>
+         <li *ngIf="!media.isMovie">Number of Seasons:{{media.number_of_seasons}}</li>
          <li>Status: {{media.status}}</li>
-         <li>Release date: {{media.release_date}} </li>
-         <li>First Air Date: {{media.first_air_date}}</li>
-         <li>Last Air Date: {{media.last_air_date}}</li>
-         <li>Runtime: {{media.runtime}} mins</li>
-         <li>Episode Runtime: {{media.episode_runtime}}</li>
-         <li>Genres: </li>
+         <li *ngIf="media.isMovie">Release date: {{media.release_date}} </li>
+         <li *ngIf="!media.isMovie">First Air Date: {{media.first_air_date}}</li>
+         <li *ngIf="!media.isMovie">Last Air Date: {{media.last_air_date}}</li>
+         <li *ngIf="media.isMovie">Runtime: {{media.runtime}} mins</li>
+         <li *ngIf="!media.isMovie">Episode Runtime: {{media.episode_runtime}}</li>
+         <li>Genres: <ul class="media-details-genre-list"><li *ngFor="let genre of media.genres">{{genre}}</li></ul></li>
      </ul>
     </div>
   </div>

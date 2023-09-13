@@ -16,4 +16,5 @@ export interface Media {
     last_air_date:string;
     episode_runtime:number;
     runtime:number;
+    genres: [];
 }

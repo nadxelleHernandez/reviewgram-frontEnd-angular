@@ -34,6 +34,7 @@ export class TVShowComponent {
     last_air_date:'',
     episode_runtime:0,
     runtime: 0,
+    genres: [],
   };
 
   constructor() {
