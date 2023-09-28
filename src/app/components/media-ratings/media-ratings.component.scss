@@ -1,6 +1,6 @@
 .media-details{
     &-container {
-        width: 550px;
+        min-width: 550px;
     }
     &-header {
         justify-content: space-between;
