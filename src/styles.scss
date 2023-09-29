@@ -10,7 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .media-details {
     &-container {
-        display: flexbox;
+        display: flex;
         flex-direction: column;
         border-width: 1px;
         border-radius: 6px;
@@ -18,11 +18,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         border-style: solid;
         margin: 20px;
         box-sizing: border-box;
-        min-width: 600px;
+        min-width: 550px;
     }
     &-header {
         display: flex;
-        justify-content:end;
+        justify-content:flex-end;
         background-color: #fcf6e3;
         border-radius: 5px;
         border-bottom: gainsboro;
@@ -40,3 +40,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         height: 72vh;
     }
 }
+
+@media (max-width: 1180px){
+    .media-details-container {
+       min-width: 350px;
+    }
+  }

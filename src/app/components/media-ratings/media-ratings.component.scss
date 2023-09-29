@@ -1,10 +1,11 @@
-.media-details{
-    &-container {
-        min-width: 550px;
-    }
+.media-details {
     &-header {
         justify-content: space-between;
     }
+}
+
+.reviews {
+    min-width: 550px;
 }
 
 .review-list {
