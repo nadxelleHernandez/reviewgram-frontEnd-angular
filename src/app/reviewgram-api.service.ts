@@ -10,6 +10,10 @@ export class ReviewgramAPIService {
   baseURL = 'http://127.0.0.1:5000'
   imagesURL = '';
 
+  constructor () {
+    this.getImagesUrlFromAPI().then(url =>this.imagesURL = url);
+  }
+
   async getImagesUrlFromAPI(): Promise<string>  {
     const response = await fetch(`${this.baseURL}/media/image-url`, {method: 'GET'});
 
@@ -23,6 +27,20 @@ export class ReviewgramAPIService {
     }
     
     return imageUrl;
+  }
+
+  async searchMedia(title:string) : Promise <Media[]> {
+    const query = {query:title};
+    const response = await fetch(`${this.baseURL}/media/search`, {method: 'POST', body: JSON.stringify(query)});
+
+    let searchResult = [];
+    if(response.ok) {
+      const data = await response.json() ?? {};
+      searchResult = data.data;
+    } else {
+      this.logError(`Error searching for media with title: ${title}`, response);
+    }
+    return searchResult;
   }
 
   async getTopMoviesFromAPI(): Promise<Media[]>{
