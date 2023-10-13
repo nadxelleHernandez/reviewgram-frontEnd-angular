@@ -1,9 +1,9 @@
 <section class="search-media">
   <mat-form-field appearance="outline" class="search-input">
     <mat-label>Search</mat-label>
-    <input matInput placeholder="Search for a Movie/TV show">
+    <input matInput #query placeholder="Search for a Movie/TV show" >
   </mat-form-field>
-  <button mat-raised-button color="accent">Search</button>
+  <button mat-raised-button color="accent" [routerLink]="['search',query.value]">Search</button>
   <button mat-raised-button color="accent" aria-label="Clear search">Clear</button>
 </section>
 <section>

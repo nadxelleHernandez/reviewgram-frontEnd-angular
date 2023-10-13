@@ -30,8 +30,14 @@ export class ReviewgramAPIService {
   }
 
   async searchMedia(title:string) : Promise <Media[]> {
-    const query = {query:title};
-    const response = await fetch(`${this.baseURL}/media/search`, {method: 'POST', body: JSON.stringify(query)});
+    const request = {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({query:title}),
+    }
+    const response = await fetch(`${this.baseURL}/media/search`, request);
 
     let searchResult = [];
     if(response.ok) {

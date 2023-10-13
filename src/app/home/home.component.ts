@@ -6,12 +6,12 @@ import { MatButtonModule } from '@angular/material/button'
 import { TopMediaListComponent } from '../components/top-media-list/top-media-list.component';
 import { Media } from '../interfaces/media';
 import { ReviewgramAPIService } from '../reviewgram-api.service';
-
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatInputModule, MatFormFieldModule, MatButtonModule, TopMediaListComponent],
+  imports: [CommonModule, MatInputModule, MatFormFieldModule, MatButtonModule, TopMediaListComponent, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

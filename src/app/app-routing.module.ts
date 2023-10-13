@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { UserListsComponent } from './pages/user-lists/user-lists.component';
 import { MediaComponent } from './pages/media/media.component';
+import { SearchComponent } from './pages/media/search/search.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,11 @@ const routes: Routes = [
     path: 'movies/:tmdb_id',
     component: MediaComponent,
     title: 'Movie details'
+  },
+  {
+    path: 'search/:title',
+    component: SearchComponent,
+    title: 'Search Result'
   }
 ];
 
