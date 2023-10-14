@@ -1,15 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ReviewgramAPIService } from 'src/app/reviewgram-api.service';
 import { Media } from 'src/app/interfaces/media';
 
 @Component({
-  selector: 'app-search',
+  selector: 'search-results',
   standalone: true,
-  imports: [CommonModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
 })
 
 export class SearchComponent {

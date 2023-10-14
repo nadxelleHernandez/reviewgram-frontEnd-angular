@@ -43,6 +43,13 @@ export class ReviewgramAPIService {
     if(response.ok) {
       const data = await response.json() ?? {};
       searchResult = data.data;
+      if(this.imagesURL==='') {
+        this.imagesURL = await this.getImagesUrlFromAPI();
+      }
+      for(let media of searchResult) {
+        let newPosterUrl = `${this.imagesURL}w154${media.poster_url}`;
+        media.poster_url = newPosterUrl;
+      }
     } else {
       this.logError(`Error searching for media with title: ${title}`, response);
     }
