@@ -1,6 +1,14 @@
 # Reviewgram FrontEnd in Angular
 
-This is an updated version for the ReviewGram project now using Angular instead of React and SCSS instead of CSS
+This is an updated version for the ReviewGram project now using Angular instead of React and SCSS instead of CSS. It has responsive behaviour, working in mobiles and desktop screens. It is a work in progress
+
+Here is a screenshot of the **desktop** version:
+
+![Screenshot of the home page](/img/reviewgramAngular.png)
+
+Here is a screenshot of the **mobile** version:
+
+![Screenshot of the home page mobile](/img/reviewgramAngularMobile.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
