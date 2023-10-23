@@ -1,6 +1,6 @@
 # Reviewgram FrontEnd in Angular
 
-This is an updated version for the ReviewGram project now using Angular instead of React
+This is an updated version for the ReviewGram project now using Angular instead of React and SCSS instead of CSS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
