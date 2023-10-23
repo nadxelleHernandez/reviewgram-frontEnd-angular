@@ -41,3 +41,9 @@
        max-width: 632px;
     }
   }
+
+  @media (max-width: 420px) {
+    .top-media-container {
+      max-width: 318px;
+    }
+  }
