@@ -5,6 +5,7 @@ import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { UserListsComponent } from './pages/user-lists/user-lists.component';
 import { MediaComponent } from './pages/media/media.component';
 import { SearchComponent } from './pages/media/search/search.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,11 @@ const routes: Routes = [
     path:'user',
     component: CreateUserComponent,
     title: 'Create User'
+  },
+  {
+    path:'login',
+    component: LoginComponent,
+    title: 'Login'
   },
   {
     path: 'userList/:user-id',

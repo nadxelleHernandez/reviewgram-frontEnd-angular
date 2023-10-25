@@ -6,7 +6,7 @@
       <a *ngIf="user.id != -1" class="nav-bar-link" [routerLink]="['/userList',user.id]">My Lists</a>
       <span class="example-spacer"></span>
       <a *ngIf="user.id != -1" class="nav-bar-link" (click)="logOut()" href="#">LogOut</a>
-      <a *ngIf="user.id == -1" class="nav-bar-link" (click)="logIn()" href="#">Login</a>
+      <a *ngIf="user.id == -1" class="nav-bar-link" [routerLink]="['/login']">Login</a>
       <a *ngIf="user.id == -1" class="nav-bar-link" [routerLink]="['/user']">Sign Up</a>
       <span *ngIf="user.id != -1">{{user.username}}</span>
   </mat-toolbar>

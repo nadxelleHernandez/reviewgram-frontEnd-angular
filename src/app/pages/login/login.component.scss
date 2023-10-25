@@ -1,0 +1,36 @@
+.form-item {
+    padding: 10px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.login {
+    margin: 30px;
+    border: 2px;
+    border-color: #9478c5;
+    border-style: solid;
+    padding: 50px;
+    width: fit-content;
+
+    &-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-label {
+        font-weight: 500;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .login {
+        display: flex;
+        flex-direction: column;
+    }
+    .login-label {
+        padding-left: 0;
+    }
+}
